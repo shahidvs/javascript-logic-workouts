@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js fundamentals</title>
+</head>
+<body>
+    <script>
+
+            
+                const investors = [
+                {first :'albert', last:'einstein', year:1887, passed:1885},
+                {first :'sumesh',last:'nair',year:2000,passed:2010},
+                {first :'kabir',last:'roy',year:1995,passed:2000},
+                {first :'sabeel',last:'khan',year:2008,passed:2015},
+                {first :'sagar',last:'musthafa',year:2004,passed:2050},
+                {first :'amal',last:'lolan',year:2001,passed:2004},
+                {first :'jasim',last:'lallu',year:1990,passed:2000}
+   
+            ];
+
+            const peoples =[
+                'ram,kumar','tippu,sulthan','mansif,manu','thaneef,than','lilu,lils',
+                'prebu,prem','fouzi,sim','muez,muhu','pallu,pilli','thanha,thanz',
+                'faheem,famza','kaleel,kallus','mohan,mohini','kichu,kichappan','lazim,loazi','varun,madav'
+            ];
+              
+
+            // //array.prototype.filter()
+            //1. filter  the list of the investors for those who were in born in the 1886's
+
+            const fifteen =investors.filter(investor => (investor.year >= 1885 && investor.year < 2000))
+            console.table(fifteen);
+
+            
+            //array.prototype.map()
+            //2.give us  an array  of the investors first and last name
+
+            const fullnames =investors.map(investor => (`${investor.first} + ${investor.last}`)) //ternarory ''=>''way
+            console.log(fullnames);
+
+            //array.protoype.sort()
+            // 3. sort the inventors by birthday oldest to youngest 
+             
+            const birthday =investors.sort((a,b)=>(a.year > b.year ? 1 : -1));
+            console.table(birthday);
+              
+            //array.prototype.reduce()
+            //4. how many years did all inventors lived
+
+            const totalyears = investors.reduce((total,investor) => {
+                return + (investor.passed - investor.year);
+            }, 0);
+             console.log(totalyears);
+
+             //5. sort the inventors by years lived
+             const oldest = investors.sort(function(a,b) {
+                const lastguy = a.passed - b.year
+                const nxtguy = a.passed - b.year
+                 return lastguy > nxtguy ? -1 : 1;
+                 
+             });
+
+             console.table(oldest);
+    </script>
+</body>
+</html>
