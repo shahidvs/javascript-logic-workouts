@@ -1,0 +1,52 @@
+.player{
+    display: flex;
+    background: white;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    max-width: 800px;
+    overflow: hidden;
+
+
+    
+}
+
+.player:hover .player-controls{
+    transform: translateY(0)  ;
+}
+
+.player-controls{
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    flex-wrap: wrap;
+    background: rgba(109, 82, 65, 0.7);
+    transform: translateY(100%) ;
+}
+
+.player__button {
+    background: none;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+}
+
+.progress{
+    height: 10px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: black;
+
+}
+
+.progress__filled{
+    height: 10px;
+    background-color: orangered;
+    width: 0%;
+}
+
+.player__button{
+    margin: 3px;
+}

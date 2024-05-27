@@ -63,6 +63,16 @@
              });
 
              console.table(oldest);
+
+
+             //6. create a list of bourlevend in paris that contain 'de' anywhere in the same 
+            //  https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
+
+            const Category =document.querySelector('.mw-category');
+            const links =Array.from(Category.querySelectorAll('a'))
+            const de =links.map(links => link.textContent);
+
+
     </script>
 </body>
 </html>

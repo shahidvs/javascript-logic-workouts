@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>console tricks</title>
+</head>
+<body>
+    <p onclick="makeGreen()">BREAKDOWN</p>
+
+    <script>
+        const dogs =[{name:'snickers',age:2},{name:'hugo',age:10}];
+
+        function makeGreen(){
+            const p =document.querySelector('p');
+            p.style.color ='#BADA55';
+            P.style.fontsize = '50px';
+        }
+
+
+        //regular
+        console.log('hello');
+
+        //interpolated : %S  value replaces  
+        console.log('hello iam a %s string','\u{1F600}');
+
+        //style %c apply css
+        console.log('%c iam gangester','font-size:50px; background:red; text-shadow:10px 10px 0 green');
+
+        //warning
+        console.warn('danger');
+
+        //error
+        console.error(404);
+
+        //info
+        console.info('athirappally waterfall closed');
+
+        //testing: its only show false statements
+        const p =document.querySelector('p');
+        console.assert(p.classList.contains('dont touch'),'that is wrong!');
+
+        // //clearing : console outputs
+        // console.clear();
+
+        //viewing DOM elements
+        console.log(p);
+        console.dir(p);
+
+        //grouping together
+        dogs.forEach(dog =>{
+        console.groupCollapsed(`${dog.name}`);
+        console.log(`${dog.name} is ${dog.age}`);
+        console.log(`${dog.name} is ${dog.age * 7} dog years old`);
+        console.groupEnd(`${dog.name}`);
+        });
+
+        //counting
+        console.count('no');
+        console.count('no');
+        console.count('yes');
+        console.count('no');
+
+        // timing
+        console.time('fetching data');
+        fetch('https://api.github.com/users/peng-zhihui/received_events')
+        .then(data => data.json())
+        .then(data =>{
+         console.timeEnd('fetching data');
+         console.log(data);
+        });
+       
+
+
+
+    </script>
+</body>
+</html>
