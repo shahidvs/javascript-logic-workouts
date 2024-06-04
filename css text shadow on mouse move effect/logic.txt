@@ -1,0 +1,76 @@
+                 .......logic note.......
+                
+3.1- First I obtained the elements from DOM and created a variable called walk with 100 value, which means how much the shadow can move/walk.
+
+const hero = document.querySelector('.hero')
+const text = hero.querySelector('h1')
+
+cont walk = 100;
+
+
+3.2- I create an event listener to the hero variable with an event mouvemove and a function called shadow.
+
+hero.addEventListener('mousemove',shadow)
+
+
+3.3- In this function caleed shadow it where I did put all the functional code to get the result of a 
+shadow moving while I move my mouse in the screen.
+
+
+const shadow = function(e){
+   const width = this.offsetWidth;
+   const height = this.offsetHeight;
+
+}
+
+First I created two variables width and height to get the measurements of the here.
+
+Note: what is offsetWidth and offsetHeight?
+offsetWidth gives the measurement in pixels of the element's CSS width 
+offsetHeight gives the measurement in pixels of the element's CSSheight the measure differs if we resize the window of the browser -responsiveness
+
+
+3.4- I created other two variables x and y that takes as value the measuresments of exact pixel in the here where the event is. (mousemove).
+I use let instead of const in this variables because I have to update them next.
+
+ let x = e.offsetX
+ let y = e.offsetY
+
+ Note: what is offsetX and offsetY?
+It is property of the MouseEvent interface that provides the offset in the X or Y coordinate of the mouse pointer between that event and the padding edge of the target node. 
+
+
+3.5- After that I needed to change the x and y variables because they are set the value of 0 in the top left of the hero and we want to set the value in the top left of the text.
+So I needed to verify if the this(hero) is different from the e.target, if that so I need to update those variables to set the value 0 in the correct place.
+
+
+const shadow = function(e){
+  ...
+  if(this !== e.target){
+      x = x + e.target.offsetLeft;
+      y = y + e.target.offsetTop;
+  }
+}
+
+
+3.6- After that I added two new variables which will contain the math to make the shadow move in correct place.
+If the shadow walks 100 we have to remember that walks 50 from the zero point to left top and 50 bottom right. so we need to devide the walk in two and subtract to the math made with the 0 point pixel where it begins divided by the height and width of the hero plus the walking .
+
+
+    const xWalk = Math.round(( x / width * walk) - (walk / 2))
+    const yWalk = Math.round(( y /height * walk) - (walk / 2))
+
+
+This will give the exact pixel moved of the shadow to every direction in the screen until 100/2 = 50.
+
+
+
+
+
+3.7- After that all I needed to do was to style the text shadow of the variable text with the values from xWalk and yWalk
+
+  text.style.textShadow = `
+    ${xWalk}px ${yWalk}px  var(--shadow-color)`;
+
+
+

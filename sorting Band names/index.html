@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>brand names</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <ul class="bands">
+        <li></li>
+        
+    </ul>
+    
+
+    <script>
+       const bands =['the plot in you','the devils wears prada','an peace life',
+        'say something','local area', 'zeone harbar is here','an old dog','a father or son'
+       ];
+
+       function strip(bandName){
+        return bandName = bandName.replace(/^(a |the |an )/i,'').trim();
+       }
+
+       const sortedBands = bands.sort((a,b) => strip(a) > strip(b) ? 1 : -1);
+
+       document.querySelector('.bands').innerHTML = sortedBands
+       .map(band => `<li> ${band} </li>`).join ('');
+
+       console.log(sortedBands);
+
+    </script>
+</body>
+</html>

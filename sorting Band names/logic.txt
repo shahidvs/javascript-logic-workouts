@@ -1,0 +1,15 @@
+                ..... sorts bands......
+
+  1)  Array Initialization: An array named bands is created, containing various band names.
+
+  2)   Strip Function: The strip function is defined to remove leading articles ("a", "an", "the") from a band name string using a regular expression.
+
+  4)  Sorting: The sort method is used to sort the bands array alphabetically, ignoring the leading articles.
+   It uses the strip function in the comparison.
+
+   5) HTML Population: The sorted list of bands is converted into HTML list items using map, and then joined into a single string. 
+   These HTML list items are inserted into an element with the class .bands using querySelector.
+
+   6) Console Logging: The sorted array of bands is logged to the console for debugging or further processing.
+
+   this code sorts a list of band names alphabetically, ignoring leading articles, and displays them as a list in HTML. 

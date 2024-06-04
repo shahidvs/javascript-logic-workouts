@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url(./img/images.jpeg);
+    background-size: cover; 
+    background-position: center; 
+    height: 100vh;
+    
+ 
+  }
+  
+  /* Centering the list horizontally */
+  .bands{
+    margin: 50px auto;
+    width: 300px;
+    border: 2px solid #333; 
+    border-radius: 5px; 
+    padding: 10px;
+    background-color: aliceblue;
+    
+  }
+  
+  /* Styling list items with point markers */
+  .bands li {
+    list-style-type: none; /* You can change this to circle or square if you prefer */
+    margin-bottom: 5px;
+    padding-left: 20px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #333;
+    
+  }
+  
+  /* Styling hover effect on list items */
+  .bands li:hover {
+    background-color: #e4d0bd;
+    color: black;
+  }
+
+  

@@ -1,0 +1,19 @@
+h1{
+    text-shadow: 10px 10px 0 rgba(0,0,0,0.1);
+    font-size: 100px;
+    
+    
+}
+
+
+body{
+    justify-items: center;
+    align-items: center;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+

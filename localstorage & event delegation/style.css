@@ -1,0 +1,74 @@
+.wrapper{
+    padding: 20px;
+    max-width: 400px;
+   
+    background: white;
+    box-shadow: 0 0 0 10px rgba(0, 0, 0,0.1);
+    justify-items: center;
+    align-items: center;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+   
+
+}
+
+body{
+    background-image: url('./img/pexels-christa-grover-977018-2121121.jpg' ) ;
+    background-size: cover; 
+    background-position: center; 
+    margin: 0; 
+    height: 100vh;
+    position: relative;
+ 
+
+}
+
+
+
+h2{
+    text-align: center;
+    margin: 0;
+    font-weight: 200;
+}
+
+.plates{
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    list-style: none;
+}
+
+.plates li{
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    padding: 10px 0;
+    font-weight: 100;
+    display: flex;
+}
+
+.plates label{
+    flex: 1;
+    cursor: pointer;
+}
+
+.plates input + label::before{
+    content: 🔲;
+    margin: 10px;
+}
+
+.plates input:checked + label::before{
+    content: '🐟';
+}
+
+.add-item{
+  margin-top: 20px;
+}
+
+.add-item input{
+    padding: 10px;
+    outline: 0;
+    border: 1px solid rgba(0,0, 0,0.1);
+}

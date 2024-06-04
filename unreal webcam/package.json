@@ -1,0 +1,14 @@
+{
+  "name": "gum",
+  "version": "1.0.0",
+  "description": "",
+  "main": "style.js",
+  "scripts": {
+    "start": "browser-sync --server --files '*.css,*.html,*.js'"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^3.0.2"
+  }
+}

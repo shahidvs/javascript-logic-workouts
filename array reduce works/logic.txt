@@ -1,0 +1,45 @@
+                .......array reduce work.....
+
+1) const timeNodes = Array.from(document.querySelectorAll('[data-time]'));:
+
+    This line selects all elements with the attribute data-time and converts the resulting NodeList into an array called timeNodes.
+
+2).map(node => node.dataset.time).map(timeCode => {...}):
+
+    This part of the code:
+        Extracts the values of the data-time attribute from each element in timeNodes.
+        Splits each time code into minutes and seconds.
+        Converts each time code into seconds and returns an array of these values.
+
+3) reduce((total, vidSecs) => total + vidSecs);:
+
+    This line sums up all the seconds calculated in the previous step to find the total duration of all videos in seconds.
+
+4)et secondsLeft = seconds;:
+
+    This line assigns the total duration in seconds to a variable called secondsLeft to be used in further calculations.
+
+5) const hours = Math.floor(secondsLeft/3600);:
+
+    This line calculates the number of hours in the total duration by dividing secondsLeft by 3600 (the number of seconds in an hour) and taking the integer part using Math.floor().
+
+
+6) econdsLeft = secondsLeft % 3600;:
+
+    This line updates secondsLeft to the remainder of the division by 3600, representing the remaining seconds after calculating hours.
+
+7)const mins = Math.floor(secondsLeft/60);:
+
+    This line calculates the number of minutes in the remaining duration by dividing secondsLeft by 60 and taking the integer part using Math.floor().
+
+
+8)secondsLeft = secondsLeft % 60;:
+
+    This line updates secondsLeft to the remainder of the division by 60, representing the remaining seconds after calculating minutes.
+
+
+9)
+    console.log(hours, mins, secondsLeft);:
+        Finally, this line logs the calculated hours, minutes, and remaining seconds to the console.
+
+This script processes the durations of the videos and outputs the total duration in hours, minutes, and seconds.
