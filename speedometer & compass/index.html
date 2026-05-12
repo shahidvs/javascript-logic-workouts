@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>speed & direction</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="compass">
+        <div class="arrow">
+            <span style="--i:1"></span>
+            <span style="--i:2"></span>
+            <span style="--i:3"></span>
+            <span style="--i:4"></span>
+            <span style="--i:5"></span>
+            <span style="--i:6"></span>
+            <span style="--i:7"></span>
+            <span style="--i:8"></span>
+            <span style="--i:9"></span>
+            <span style="--i:10"></span>
+            <span style="--i:11"></span>
+            <span style="--i:12"></span>
+            <span style="--i:13"></span>
+            <span style="--i:14"></span>
+            <span style="--i:15"></span>
+            <span style="--i:16"></span>
+            <span style="--i:17"></span>
+            <span style="--i:18"></span>
+            <span style="--i:19"></span>
+            <span style="--i:20"></span>
+            <span style="--i:21"></span>
+            <span style="--i:22"></span>
+            <span style="--i:23"></span>
+            <span style="--i:24"></span>
+            <span style="--i:25"></span>
+            <span style="--i:26"></span>
+            <span style="--i:27"></span>
+            <span style="--i:28"></span>
+            <span style="--i:29"></span>
+            <span style="--i:30"></span>
+            <span style="--i:31"></span>
+            <span style="--i:32"></span>
+            <span style="--i:33"></span>
+            <span style="--i:34"></span>
+            <span style="--i:35"></span>
+            <span style="--i:36"></span>
+            
+           
+            <div class="needles">
+                <div class="needleup"></div>
+               <div class="needledown"></div>
+            </div>
+            
+
+        </div>
+        
+        <div class="direction north">S</div>
+        <div class="direction south">N</div>
+        <div class="direction west">W</div>
+        <div class="direction east">E</div>
+        <div class="speeds">0</div><div style="color: rgb(0, 0, 0); padding-left: 15px ;  ">km/h</div>
+
+    </div>
+       
+
+    <script>
+        const needles = document.querySelectorAll('.needles');
+        const speedDisplay = document.querySelector('.speeds')
+        let =0;
+
+function rotateNeedles(degrees) {
+    needles.forEach(needle => {
+        needle.style.transform = `rotate(${degrees}deg)`;
+    });
+
+   const speed = Math.floor(Math.random()*100);
+    speedDisplay.textContent =speed;
+}
+
+setInterval(() => {
+    rotateNeedles((Math.random() * 360)); // Random rotation between 0 and 360 degrees
+}, 200); // Change rotation every 2000 milliseconds (2 seconds)
+
+
+        
+    </script>
+
+
+</body>
+</html>

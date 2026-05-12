@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nav transition</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <nav>
+        <ul class="menu">
+           <li><a href="">HOME</a></li>
+           <li><a href="">ORDER STATUS</a></li>
+           <li><a href="">TWEETS</a></li>
+           <li><a href="">READ OUR HISTORY</a></li>
+           <li><a href="">CONTACT US</a></li>
+
+           
+        </ul>
+    </nav>
+
+    <div class="wrapper">
+        <p>    Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus esse beatae fugit, enim minima odio aut, ut quisquam nobis deserunt at. Officiis praesentium laboriosam quam voluptatum hic ea? Ab, vero.
+            Nobis mollitia deserunt cumque expedita porro iure earum asperiores, sint repellendus, nesciunt, quisquam delectus. Deleniti repellat veniam harum qui rerum! Dignissimos sunt placeat, voluptates adipisci animi tenetur reprehenderit recusandae vitae!
+            Excepturi voluptatem eveniet totam voluptates velit minus? <a href="">Dignissimos</a> cupiditate, obcaecati iste reprehenderit fugiat corporis sint neque in molestias quidem exercitationem tempora eos quibusdam necessitatibus porro similique, corrupti excepturi temporibus. Voluptate?
+    </p>
+         <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et, veniam at. Quis numquam ipsa, sequi eaque placeat, adipisci voluptates fugit provident sapiente eos quisquam necessitatibus laudantium, tempora labore unde quidem?
+            Delectus quasi similique dicta, <a href="">commodi</a> adipisci non numquam beatae tempora, eum, rerum voluptates consectetur dignissimos molestias laborum nobis maiores! Quae, dolore provident! Expedita consequatur soluta, eum laboriosam facere atque numquam!
+            Neque id inventore architecto officia corporis sequi! Totam reprehenderit neque ducimus pariatur dolore recusandae exercitationem alias eaque molestias autem eum, dolorum harum minima ut nam. Nihil aut repellendus vero obcaecati.
+    
+         </p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde itaque reiciendis molestias at aut corporis earum blanditiis, perspiciatis autem placeat, ad doloremque? Quia nesciunt in deleniti repellendus eveniet fugit quaerat?
+        
+
+        <p>
+            Natus asperiores ad <a href="">necessitatibus</a> delectus quo quisquam quam voluptatem laboriosam nam iure. Maxime totam explicabo velit? Placeat non unde aut nihil omnis laborum exercitationem! Ducimus beatae ipsa tenetur deserunt voluptate?
+            Eaque, quam nulla assumenda dolorum quia iste nostrum voluptatum ratione, voluptas atque dolor reprehenderit quas doloremque asperiores cumque molestias quae labore veritatis ipsam ea illo? Magni esse officia deleniti autem?
+            Accusantium commodi tempore ipsa illum consectetur est libero laboriosam doloremque in iusto, quibusdam, tenetur dignissimos adipisci nesciunt? Debitis minima excepturi officia molestias cum dignissimos! Incidunt tempora corrupti at aut ad!
+            Molestias consequuntur blanditiis nobis, quisquam iusto fugiat, enim nam corporis ducimus, ullam odio maxime. Unde reprehenderit, quae, aut officiis cum dolore error fuga magni sint eveniet qui ipsum sequi ratione.
+            At facilis dolore voluptatibus, eligendi dicta corrupti mollitia, harum neque quod ea minima eius reiciendis illum aut ratione laborum ex odit labore aliquid libero necessitatibus, repellat est. Pariatur, cupiditate distinctio?
+            Amet minima hic fugiat quas facilis est magnam illum omnis nesciunt nihil sequi eos quaerat deserunt, ipsam cum ut repudiandae totam, suscipit, dolores nostrum. Possimus magnam id nesciunt voluptas illo!
+            Consequuntur impedit corrupti, totam similique non omnis. Architecto quos ea voluptas quam inventore recusandae odit nostrum cumque nulla dicta placeat magnam dignissimos, voluptate id, at facilis distinctio. Itaque, magnam corporis.
+            Consequatur placeat, aliquid eligendi id minima architecto officiis sapiente, quos soluta saepe molestiae ex facere repudiandae, vitae modi explicabo corporis? Maiores inventore eius, aperiam fugiat sunt dolorum voluptate incidunt adipisci.
+    
+        </p>
+    </div>
+    
+
+    <script>
+       const triggers = document.querySelectorAll('a');
+        const highlight = document.createElement('span');
+        highlight.classList.add('highlight');
+        document.body.append(highlight);
+
+        function highlightLink(){
+            const linkCoords = this.getBoundingClientRect();
+            
+             const coords ={
+                width:linkCoords.width,
+                height:linkCoords.height,
+                top:linkCoords.top + window.scrollY,
+                left:linkCoords.left + window.scrollX
+             };
+
+            highlight.style.width = `${coords.width}px `;
+            highlight.style.height = `${coords.height}px `;
+            highlight.style.transform= `translate(${coords.left}px,${coords.top}px)`;
+
+        }
+
+        
+         
+        triggers.forEach(a => a.addEventListener('mouseenter',highlightLink))
+
+        
+         
+        
+    </script>
+</body>
+</html>

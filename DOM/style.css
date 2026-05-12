@@ -1,0 +1,82 @@
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+h1,h2{
+    font-weight: normal;
+    margin: 0%;
+}
+
+#wrapper{
+    width: 90%;
+    max-width: 800px;
+    margin: auto;
+    box-shadow: 5px 3px 2px #aaa;
+    border: 1px solid #aaa;
+
+}
+
+header{
+    background-color: antiquewhite;
+    color: black;
+    padding: 10px 0px;
+    text-align: center;
+}
+
+#add-item{
+
+    margin: 10px auto;
+    width: 400px;
+}
+
+#add-item input{
+    width: 350px;
+    padding: 5px 0px;
+    display: block;
+    float: left;
+    border-radius: 0px;
+    border: 1px solid #aaa;
+}
+
+#add-item button{
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 6px;
+
+}
+
+#grocery-list{
+    margin: 20px;
+
+}
+
+#grocery-list ul{
+   list-style: none;
+   margin: 0px;
+   padding: 0px;
+
+}
+
+#grocery-list li{
+   
+    margin: 30px 0px;
+    padding: 10px;
+    border-left: 5px solid #aaa;
+
+ 
+ }
+
+ #grocery-list .delete{
+     float: right;
+     background-color: red;
+     color: white;
+     padding: 10px;
+     cursor: pointer;
+ }
+
+ #grocery-list li:hover{
+     border-color: red;
+ }
+

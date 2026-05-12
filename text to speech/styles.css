@@ -1,0 +1,54 @@
+.voiceinator {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    background-image: linear-gradient(to bottom right, #FDABDD, #374A5A);
+    background-size: cover;
+}
+
+.voiceinator h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.voiceinator select,
+.voiceinator input[type="range"],
+.voiceinator textarea {
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.voiceinator textarea {
+    resize: none;
+    height: 100px;
+}
+
+.voiceinator button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.voiceinator button:hover {
+    background-color: #0056b3;
+}
+
+body{
+    background-color: black;
+}
+
+h1{
+    color: rgb(255, 255, 255);
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dropdown</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <nav class="top">
+        <div class="dropdownbackground">
+            <span class="arrow"></span>
+        </div>
+    
+        <ul class="cool">
+            <li>
+                <a href="#">About Me</a>
+                <div class="dropdown dropdown1">
+                    <div class="bio">
+                        <img src="" alt="">
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore quis sunt maiores ex eius quae facilis reiciendis doloribus aliquid quas? Consectetur incidunt assumenda maiores id reprehenderit ratione quod molestiae aperiam.</p>
+                    </div>
+                </div>
+            </li>
+    
+            <li>
+                <a href="#">Courses</a>
+                <ul class="dropdown courses">
+                    <li>
+                        <span class="code">RFB</span>
+                        <a href="">React for beginners</a>
+                    </li>
+                    <li>
+                        <span class="code">ES6</span>
+                        <a href="">ES6 for everyone</a>
+                    </li>
+                    <li>
+                        <span class="code">Stpu</span>
+                        <a href="">subile Text power user</a>
+                    </li>
+                </ul>
+            </li>
+    
+            <li>
+                <a href="#">Other Link</a>
+                <ul class="dropdown dropdown3">
+                    <li><a class="button" href="">Twitter</a></li>
+                    <li><a class="button" href="">Facebook</a></li>
+                    <li><a class="button" href="">Instagram</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+<script>
+    const triggers =document.querySelectorAll('.cool > li');
+    const background =document.querySelector('.dropdownbackground');
+    const nav=document.querySelector('.top');
+
+    function handleenter(){
+       this.classList.add('trigger-enter')
+       setTimeout( () => this.classList.add('tigger-enter-active'),150);
+
+    }
+
+    function handleleave(){
+        console.log('leave');
+
+    }
+
+    triggers.forEach(trigger => trigger.addEventListener('mouseenter',handleenter));
+    triggers.forEach(trigger => trigger.addEventListener('mouseleave',handleleave));
+
+
+</script>
+       
+</body>
+</html>

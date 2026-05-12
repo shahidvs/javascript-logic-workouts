@@ -1,0 +1,168 @@
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 100vh;
+   background: rgb(5, 5, 5);
+
+}
+
+.compass{
+    position: relative;
+    height: 380px;
+    width: 380px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50px;
+    box-shadow: 0px 17px 2px 0px rgba(173, 172, 172, 0.4)0 0 3px rgba(173, 173, 0.6),0 0 15px rgba(82, 78, 78, 0.48)
+    ;
+}
+
+.arrow{
+    position: absolute;
+    height: 320px;
+    width: 320px;
+    border-radius: 50%;
+    background: linear-gradient(rgb(145,164,229)20%, rgb(101,101,238)80%);
+    left: 8%;
+    top: 8%;
+    transition: all 0.2;
+    transform: rotate(0deg);
+    display: inline-block;
+   
+    
+
+}
+
+.arrow span{
+    position: absolute;
+    height: 24px;
+    width: 2px;
+    background-color: whitesmoke;
+     left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(calc(10deg * var(--i)));
+    transform-origin: 1px 150px;
+    top: 20px;
+}
+
+.arrow span::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 12px;
+    background-color: rgb(247, 239, 239);
+    left: 53%;
+    bottom: 0;
+    transform: translateX(-50%);
+}
+
+.arrow span:nth-child(2n)::after {
+    height: 130%; 
+}
+
+.needleup{
+    
+    clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+    height: 140px;
+    width: 30px;
+    background: linear-gradient(rgb(229, 145, 145)20%, rgb(238, 101, 101)80%);
+    transform: rotate(0deg);
+    transform-origin: bottom center ;
+
+}
+
+
+
+.needledown{
+     
+    clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+    height: 140px;
+    width: 30px;
+    background: linear-gradient(rgb(54, 54, 54)20%, rgb(5, 0, 0)80%);
+    transform: rotate(180deg);
+    transform-origin: top center;
+
+}
+
+.needles .needleup{
+    position: absolute;
+    top: calc(50% - 140px); /* Adjust vertical position */
+    left: calc(50% - 15px);
+    transform-origin: top center;
+
+
+}
+
+
+.needles .needledown{
+    position: absolute;
+    bottom: calc(50% - 0px); /* Adjust vertical position */
+    left: calc(50% - 15px);
+    transform-origin: bottom center ;
+
+}
+
+
+
+
+
+
+
+.direction {
+    position: absolute;
+    font-size: 24px;
+    color: rgb(248, 9, 9);
+    font-weight: bold;
+}
+
+.north {
+    top: 350px;
+    left: calc(50% - 7px);
+   
+}
+
+.south {
+    bottom: 350px;
+    left: calc(50% - 8px);
+}
+
+.west {
+    bottom: calc(50% - 11px);
+    left: 5px;
+}
+
+.east {
+    bottom: calc(50% - 11px);
+    right: 5px;
+    
+}
+
+.speeds{
+    color: rgb(211, 125, 39);
+    padding: 20px;
+    margin: 3px;
+   
+}
+
+.needles{
+    position: absolute;
+    bottom: calc(50% - 0px); /* Adjust vertical position */
+    right: calc(50% - 1px);
+}
+
+
+
+
+
+
+
+
